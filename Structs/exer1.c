@@ -101,10 +101,34 @@ void buscaNome(BANDA banda[]){
 
 int main(void)
 {
+	char opc;
+
 	BANDA banda[DIM];
 	preenche(banda);
-	exibe(banda);
-	exibePos(banda);
-	buscaEstilo(banda);
-	buscaNome(banda);
+	system("clear");
+	
+	while (opc != 's'){
+		__fpurge(stdin);
+		printf("digite uma opção:\n1: Exibe Posição\n2: Busca por Estilo\n3: Busca por Nome da Banda\ns: sair\n");
+		scanf("%c", &opc);
+		switch(opc){
+			case '1':
+				exibePos(banda);
+				break;
+			case '2':
+				buscaEstilo(banda);
+				break;
+			case '3':
+				buscaNome(banda);
+				break;
+			case 's':
+				return 0;
+				break;
+			default:
+				printf("opção inválida\n");
+		}
+
+	}
+
+
 }
