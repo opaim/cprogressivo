@@ -1,0 +1,4 @@
+"Meu nome: Odirlei Paim
+Moro em: São Paulo
+Estudo pelo C Progressivo
+E pretendo ser programador C"
